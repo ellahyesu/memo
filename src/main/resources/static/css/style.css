@@ -1,0 +1,65 @@
+@charset "UTF-8";
+
+* {
+	font-family: 'Noto Sans KR', sans-serif;
+}
+
+#wrap {
+	width:1200px; height:1000px; margin:auto;
+}
+
+header {
+	height:100px;
+}
+
+header .logo {
+	height:100px;
+}
+
+#isLoggedIn {
+	color:white;
+}
+
+#isLoggedIn:hover {
+	text-decoration:none; 
+	color:red;
+}
+
+nav {
+	height:50px;
+}
+
+#navBar {
+	background-color:#FAFBFC;
+}
+
+#navBar a {
+	color: black;
+}
+ 
+#navBar a:hover {
+	color: #007BFF;
+}
+
+.logo {
+	/* font-family: 'Gaegu', cursive; */
+	font-size: 60px; 
+	/* width:300px; */
+}
+header .login-info {
+	width:900px;
+}
+
+.contents {
+	height:600px;
+}
+
+#loginIdCheckBtn {
+	font-size:13px;
+	/* background-color:#c0c0c0; */
+}
+
+footer {
+	height:100px;
+	background-color:#FAFBFC;
+}
