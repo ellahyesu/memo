@@ -17,9 +17,6 @@
 			<div id="idCheckLength" class="small text-danger d-none">
 				ID를 4자 이상 입력해주세요.
 			</div>
-			<div id="idCheckBlank" class="small text-danger d-none">
-				ID에 공백이 포함될 수 없습니다.
-			</div>
 			<div id="idCheckDuplicated" class="small text-danger d-none">
 				이미 사용중인 ID 입니다.
 			</div>
@@ -59,11 +56,6 @@
 				$('#idCheckLength').removeClass('d-none'); // 4자 이상 입력 경고 문구 노출
 				$('#idCheckDuplicated').addClass('d-none'); // 숨김
 				$('#idCheckOk').addClass('d-none'); // 숨김
-				return;
-			}
-			// ID에 공백이 포함되어 있으면 경고 문구 노출
-			if (loginId.length != $('#loginId').val()) {
-				$('#idCheckBlank').removeClass('d-none');
 				return;
 			}
 

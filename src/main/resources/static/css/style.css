@@ -53,6 +53,9 @@ header .login-info {
 .contents {
 	height:600px;
 }
+.contents .post-box {
+	width:900px;
+}
 
 #loginIdCheckBtn {
 	font-size:13px;
