@@ -45,4 +45,45 @@ public class PostRestController {
 		
 		return result;
 	}
+	
+	@PostMapping("/update")
+	public Map<String, String> postUpdate(
+			@RequestParam("postId") int postId
+			, @RequestParam("subject") String subject
+			, @RequestParam("content") String content
+			, @RequestParam(value="file", required=false) MultipartFile file
+			, HttpServletRequest request) {
+		
+		HttpSession session = request.getSession();
+		Integer userId = (Integer) session.getAttribute("userId");
+		String userLoginId = (String) session.getAttribute("userLoginId");
+				
+		Map<String, String> result = new HashMap<>();
+		int row = postBO.updatePost(postId, userId, userLoginId, subject, content, file);
+		if (row > 0) {
+			result.put("result", "success");
+		} else {
+			result.put("result", "fail");
+		}
+		return result;
+	}
+	
+	@RequestMapping("/delete")
+	public Map<String, String> postDelete(
+			@RequestParam("postId") int postId
+			, HttpServletRequest request) {
+		
+		HttpSession session = request.getSession();
+		Integer userId = (Integer) session.getAttribute("userId");
+		
+		Map<String, String> result = new HashMap<>();
+		int row = postBO.deletePost(postId, userId);
+		if (row > 0) {
+			result.put("result", "success");
+		} else {
+			result.put("result", "fail");
+		}
+		return result;
+	}
+	
 }

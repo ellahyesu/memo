@@ -41,8 +41,27 @@ public class FileManagerService {
 		Files.write(path, bytes);
 		
 		// 이미지 URL 만들어 리턴
-		// http://localhost/images/coco12_1629441276231/PaintJS[EXPORT] (5).png
+		// http://localhost/images/coco12_1629441276231/PaintJS[EXPORT](5).png
 		return "/images/" + directoryName + file.getOriginalFilename();
+	}
+	
+	// 파일 삭제
+	public void deleteFile(String imagePath) throws IOException {
+		// imagePath => /images/coco12_1629441276231/PaintJS[EXPORT](5).png
+		// /images/가 중복되기 때문에 공백으로 치환해준다.
+		// C:\\Users\\ella\\6_spring_project\\memo\\memo_workspace\\Memo\\images/coco12_1629441276231/PaintJS[EXPORT](5).png
+		Path path = Paths.get(FILE_UPLOAD_PATH + imagePath.replace("/images/", ""));
+		if (Files.exists(path)) {
+			Files.delete(path); // 이미지 삭제
+		}
+		
+		// 디렉토리 삭제
+		path = path.getParent();
+		if (Files.exists(path)) {
+			Files.delete(path);
+		}
+		
+		
 	}
 	
 }

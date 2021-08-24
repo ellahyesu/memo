@@ -5,7 +5,7 @@
 }
 
 #wrap {
-	width:1200px; height:1000px; margin:auto;
+	width:1200px; margin:auto;
 }
 
 header {
@@ -51,7 +51,6 @@ header .login-info {
 }
 
 .contents {
-	height:600px;
 }
 .contents .post-box {
 	width:900px;
