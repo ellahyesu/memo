@@ -3,13 +3,13 @@
 
 <h1 class="p-4 text-center">회원 가입</h1>
 
-<div class="d-flex justify-content-center align-items-center">
+<div class="d-flex justify-content-center align-items-center mb-4">
 	<div class="col-4">
 		
 		<form id="signUpForm" method="post" action="/user/sign_up_for_submit">
 			<label for="loginId" class="m-0 font-weight-bold">아이디</label>
 			<div class="d-flex">
-				<input type="text" id="loginId" name="loginId" class="form-control mr-2">
+				<input type="text" id="loginId" name="loginId" class="form-control mr-2" placeholder="아이디">
 				<button type="button" id="loginIdCheckBtn" class="btn btn-danger">
 					중복확인
 				</button>
@@ -25,22 +25,21 @@
 			</div>
 
 			<label for="password" class="m-0 mt-2 font-weight-bold">비밀번호</label> 
-			<input type="password" id="password" name="password" class="form-control"> 
+			<input type="password" id="password" name="password" class="form-control" placeholder="비밀번호"> 
 			
 			<label for="confirmPassword" class="m-0 mt-2 font-weight-bold">비밀번호 확인</label> 
-			<input type="password" id="confirmPassword" name="confirmPassword" class="form-control">
+			<input type="password" id="confirmPassword" name="confirmPassword" class="form-control" placeholder="비밀번호 확인">
 
 			<label for="name" class="m-0 mt-2 font-weight-bold">이름</label> 
-			<input type="text" id="name" name="name" class="form-control">
+			<input type="text" id="name" name="name" class="form-control" placeholder="이름">
 
 			<label for="email" class="m-0 mt-2 font-weight-bold">이메일 주소</label> 
-			<input type="text" id="email" name="email" class="form-control">
+			<input type="text" id="email" name="email" class="form-control" placeholder="이메일 주소">
 
 			<button type="submit" id="signUpBtn" class="btn btn-primary w-100 mt-3">회원가입</button>
 		</form>
 	</div>
 </div>
-
 
 <script>
 	$(document).ready(function() {

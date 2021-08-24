@@ -36,9 +36,7 @@
 	$(document).ready(function() {
 		// 삭제 버튼 클릭
 		$('#postDelBtn').on('click', function() {
-			
-			alert($(this).data('post-id'));
-			
+			// alert($(this).data('post-id'));
 			$.ajax({
 				url: '/post/delete'
 				, type: 'post'

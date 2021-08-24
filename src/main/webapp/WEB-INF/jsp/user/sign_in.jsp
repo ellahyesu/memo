@@ -3,7 +3,7 @@
     
 <h1 class="p-4 text-center">로그인</h1>
     
-<div class="d-flex justify-content-center align-items-center">
+<div class="d-flex justify-content-center align-items-center mb-4">
 	<div class="login-box col-4">
 		<form id="loginForm" method="post" action="/user/sign_in">
 			<input type="text" id="loginId" name="loginId" class="form-control mt-2" placeholder="아이디">

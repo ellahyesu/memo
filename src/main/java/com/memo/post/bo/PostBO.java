@@ -42,7 +42,7 @@ public class PostBO {
 			standardId = prevId;
 			
 			// 정렬을 뒤집어야 한다.
-			List<Post> postList = postDAO.selectPostListByUserId(userId, direction, standardId, userId);
+			List<Post> postList = postDAO.selectPostListByUserId(userId, direction, standardId, POST_MAX_SIZE);
 			Collections.reverse(postList);
 			return postList;
 		} else if (nextId != null) {
