@@ -1,4 +1,4 @@
-# memo 프로젝트
+# Spring Project - CRUD 메모 게시판
 ## Introduction
 ## Stack
 ## Preview
